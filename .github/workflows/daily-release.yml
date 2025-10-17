@@ -9,6 +9,7 @@ on:
 
 jobs:
   update-compatibility-date:
+    if: ${{ secrets.DEVPROD_PAT != '' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
